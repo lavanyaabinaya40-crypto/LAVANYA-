@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lavanya | Computer Science Student</title>
+<meta name="description" content="Portfolio of Lavanya, BE CSE student at SRM Valliammai Engineering College, learning Python.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;800&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --night: #07040f;
+    --panel: #120a24;
+    --line: #2b1a4f;
+    --purple: #b57bff;
+    --violet: #7a3cff;
+    --pink: #ff6ad5;
+    --text: #efe8ff;
+    --muted: #a99bc9;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    background:
+      radial-gradient(900px 500px at 80% -10%, rgba(122,60,255,.28), transparent 60%),
+      radial-gradient(700px 500px at -10% 40%, rgba(255,106,213,.14), transparent 60%),
+      var(--night);
+    color: var(--text);
+    font-family: "DM Sans", system-ui, sans-serif;
+    line-height: 1.7;
+    min-height: 100vh;
+  }
+  a { color: inherit; }
+  :focus-visible { outline: 2px solid var(--pink); outline-offset: 3px; }
+
+  header {
+    display: flex; justify-content: space-between; align-items: center;
+    max-width: 960px; margin: 0 auto; padding: 20px 24px;
+  }
+  .logo { font-family: Syne, sans-serif; font-weight: 800; text-decoration: none; letter-spacing: .5px; }
+  nav { display: flex; gap: 20px; }
+  nav a { text-decoration: none; color: var(--muted); font-size: .95rem; }
+  nav a:hover { color: var(--purple); text-shadow: 0 0 12px var(--violet); }
+
+  main { max-width: 960px; margin: 0 auto; padding: 0 24px 60px; }
+
+  /* Hero */
+  .hero { padding: 70px 0 60px; }
+  .hero p.hi { color: var(--muted); font-size: 1.1rem; }
+  h1 {
+    font-family: Syne, sans-serif; font-weight: 800;
+    font-size: clamp(3.4rem, 14vw, 7.5rem);
+    line-height: 1; margin: 8px 0 18px;
+    color: #fff;
+    text-shadow: 0 0 8px var(--purple), 0 0 28px var(--violet), 0 0 64px var(--violet);
+    animation: neon-on 1.4s ease-out both;
+  }
+  @keyframes neon-on {
+    0%, 18%, 22%, 55% { opacity: .25; text-shadow: none; }
+    20%, 60%, 100% { opacity: 1; }
+  }
+  .role { font-size: 1.25rem; max-width: 34ch; }
+  .goal {
+    margin-top: 28px; padding-left: 16px;
+    border-left: 3px solid var(--pink);
+    font-family: Syne, sans-serif; font-weight: 600; font-size: 1.25rem;
+    max-width: 30ch;
+  }
+  .seven { display: flex; gap: 12px; margin-top: 40px; }
+  .seven span {
+    width: 14px; height: 14px; border-radius: 50%;
+    background: var(--purple);
+    box-shadow: 0 0 10px var(--purple), 0 0 22px var(--violet);
+  }
+  .seven span:nth-child(even) { background: var(--pink); box-shadow: 0 0 10px var(--pink), 0 0 22px var(--pink); }
+
+  /* Sections */
+  section { padding: 44px 0; border-top: 1px solid var(--line); }
+  h2 {
+    font-family: Syne, sans-serif; font-weight: 800;
+    font-size: 2rem; margin-bottom: 16px;
+    text-shadow: 0 0 18px rgba(181,123,255,.6);
+  }
+  p + p { margin-top: 12px; }
+  .about p { max-width: 62ch; }
+
+  .python {
+    background: var(--panel); border: 1px solid var(--line);
+    border-radius: 14px; padding: 24px; max-width: 640px;
+    box-shadow: 0 0 40px rgba(122,60,255,.18);
+  }
+  .python p { color: var(--muted); }
+  pre {
+    margin-top: 16px; padding: 16px; border-radius: 10px;
+    background: #0a0617; border: 1px solid var(--line);
+    overflow-x: auto; font-size: .95rem; line-height: 1.6;
+    color: var(--purple);
+  }
+  pre .s { color: var(--pink); }
+
+  .contact a.mail {
+    display: inline-block; margin-top: 8px; padding: 12px 22px;
+    border: 1.5px solid var(--purple); border-radius: 999px;
+    text-decoration: none; font-weight: 500; overflow-wrap: anywhere;
+    box-shadow: 0 0 14px rgba(181,123,255,.45), inset 0 0 14px rgba(181,123,255,.15);
+    transition: background .2s, box-shadow .2s;
+  }
+  .contact a.mail:hover { background: rgba(181,123,255,.18); box-shadow: 0 0 26px var(--violet); }
+
+  footer {
+    text-align: center; color: var(--muted); font-size: .9rem;
+    padding: 28px 24px 40px; border-top: 1px solid var(--line);
+  }
+
+  @media (max-width: 520px) {
+    nav { gap: 14px; }
+    .hero { padding: 40px 0; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    h1 { animation: none; }
+    html { scroll-behavior: auto; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <a class="logo" href="#top">Lavanya</a>
+  <nav aria-label="Main">
+    <a href="#about">About</a>
+    <a href="#python">Python</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<main id="top">
+  <div class="hero">
+    <p class="hi">Hi, I'm</p>
+    <h1>Lavanya</h1>
+    <p class="role">Computer science student at SRM Valliammai Engineering College.</p>
+    <p class="goal">I want to become a software developer.</p>
+    <div class="seven" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+  </div>
+
+  <section id="about" class="about">
+    <h2>About me</h2>
+    <p>I'm a first-year B.E. Computer Science and Engineering student (CSE-2) at SRM Valliammai Engineering College.</p>
+    <p>I'm at the start of my coding journey, and I'm building the skills I need to become a software developer.</p>
+  </section>
+
+  <section id="python">
+    <h2>Learning Python</h2>
+    <div class="python">
+      <p>I've just started learning Python. It's my first programming language, and I'm working through the basics one step at a time.</p>
+      <pre><code>print(<span class="s">"Hello, world!"</span>)</code></pre>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Contact</h2>
+    <p>Want to say hi? Send me an email.</p>
+    <a class="mail" href="mailto:Lavanyaabinaya40@gmail.com">Lavanyaabinaya40@gmail.com</a>
+  </section>
+</main>
+
+<footer>
+  &copy; 2026 Lavanya &middot; Made with purple love, I purple you.
+</footer>
+
+</body>
+</html>
